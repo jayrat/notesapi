@@ -4,7 +4,10 @@
   "description": "Note Taking API Backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon .",
+    "test": "mocha --recursive --exit",
+    "test:dev": "mocha --recursive --watch"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,28 @@
   "bugs": {
     "url": "https://github.com/jayrat/notesapi/issues"
   },
-  "homepage": "https://github.com/jayrat/notesapi#readme"
+  "homepage": "https://github.com/jayrat/notesapi#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.22",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.4.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^8.0.1",
+    "mockgoose": "^8.0.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "supertest": "^4.0.2"
+  }
 }
