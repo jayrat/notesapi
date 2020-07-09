@@ -7,6 +7,10 @@
 const config = require('./config/config');
 const express = require('express');
 
+const logger = require('./utilities/logger').get('server');
+// Start Database Connection
+require('./utilities/db');
+
 const port = config.port || 3000;
 
 const app = new express();
@@ -20,7 +24,7 @@ const server = app.listen(port, (err) => {
     console.error(err);
     throw err;
   }
-  console.log(`Running on PORT ${port}`);
+  logger.info(`Running on PORT ${port}`);
 });
 
 module.exports = server;
