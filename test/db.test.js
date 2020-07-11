@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const dbConnect = require('../utilities/db');
 
 describe('Database Test', () => {
-  
   it('Mongoose has a connection', (done) => {
     // Call Database Connection
     dbConnect();

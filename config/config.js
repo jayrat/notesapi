@@ -28,5 +28,11 @@ module.exports = {
       poolSize: 10,
       authSource: process.env.MONGO_AUTH
     }
+  },
+  auth: {
+    client: process.env.OAUTH_CLIENT,
+    secret: process.env.OAUTH_SECRET,
+    session: process.env.SESSION_SECRET,
+    jwtSecret: process.env.SECRET
   }
 };
